@@ -1,0 +1,22 @@
+<script>
+  $(document).ready(function() {
+    google.script.run
+      .withSuccessHandler(applyDataSet)
+      .getDataSet($("#url").attr("href"));
+  });
+
+  function applyDataSet(dataSet) {
+    const dataSetJson = JSON.parse(dataSet);
+    $("#title").html(dataSetJson.title);
+    $("#table_content").html(dataSetJson.tableContent);
+    $("#sorted").tablesorter({
+      theme: "blue",
+      widgets: ["zebra", "cssStickyHeaders"],
+      widgetOptions: {
+        cssStickyHeaders_offset: 0,
+        cssStickyHeaders_attachTo: null,
+        cssStickyHeaders_zIndex: 10
+      }
+    });
+  }
+</script>

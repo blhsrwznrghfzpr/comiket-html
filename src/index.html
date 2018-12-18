@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/css/theme.blue.min.css"
+      integrity="sha256-Xj5kQBWJMyOV0+sPr+wIBUHXdoZ00TPgT+RuiyOXtzo="
+      crossorigin="anonymous"
+    />
+    <?!= include('css'); ?>
+  </head>
+  <body>
+    <h1 id="title"></h1>
+    <p>PCで見る場合は<a id="url" href="<?= url ?>">こちら</a></p>
+    <div id="table_content"><div>Now Loading...</div></div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"
+      integrity="sha256-uC1JMW5e1U5D28+mXFxzTz4SSMCywqhxQIodqLECnfU="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/widgets/widget-cssStickyHeaders.min.js"
+      integrity="sha256-k8wLBWlljVeQXMkwPGONwnQVNyXBIJSVFBBXKCsVz5Y="
+      crossorigin="anonymous"
+    ></script>
+    <?!= include('js'); ?>
+  </body>
+</html>
