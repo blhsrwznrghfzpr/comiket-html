@@ -100,5 +100,5 @@ function paddingAnchorTag_(str: string): string {
     return str;
   }
   const dispUrl = str.length < 37 ? str : `${str.substring(0, 37)}...`;
-  return `<a href="${str}">${dispUrl}</a>`;
+  return `<a href="${str}" target="_blank">${dispUrl}</a>`;
 }
