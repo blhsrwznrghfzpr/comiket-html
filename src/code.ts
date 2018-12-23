@@ -33,7 +33,11 @@ function doGet(request: IfRequest): GoogleAppsScript.HTML.HtmlOutput {
   }
   const template: IfHtmlTemplate = HtmlService.createTemplateFromFile("index");
   template.url = url;
-  return template.evaluate();
+  return template
+    .evaluate()
+    .setTitle(
+      "Enjoy TRPG in コミケ!!｜コミックマーケットTRPGジャンル参加者への非公式支援サイト",
+    );
 }
 
 const headerClassMap_ = {
